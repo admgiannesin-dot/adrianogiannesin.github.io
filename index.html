@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="google-site-verification" content="AtwVM_ldF93elwJA5xmyR6Klc14KO57n8SqOjGC_rUs" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d0d0d">
+  <meta name="author" content="Adriano Giannesin">
   <title>Adriano Giannesin — Mnemosyne · The Orpheus Cycle</title>
   <meta name="description" content="Official site of Adriano Giannesin. Mnemosyne: The Orpheus Cycle — a literary novel about grief, memory, and the things we refuse to let go. Available in English, Portuguese, and Spanish.">
   <link rel="canonical" href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/">
@@ -15,6 +17,9 @@
   <meta property="og:url" content="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/">
   <meta property="og:image" content="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/assets/cover-en.jpg">
   <meta property="og:site_name" content="Adriano Giannesin">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:locale:alternate" content="es_ES">
 
   <!-- Hreflang -->
   <link rel="alternate" hreflang="pt-br" href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/pt/">
@@ -38,7 +43,10 @@
     "inLanguage": ["pt-BR", "en", "es"],
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://www.amazon.com/s?k=Adriano+Giannesin",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.amazon.com/s?k={search_term_string}"
+      },
       "query-input": "required name=search_term_string"
     }
   }

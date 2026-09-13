@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d0d0d">
+  <link rel="preload" as="image" href="../assets/cover-pt.jpg" fetchpriority="high">
   <title>MNEMOSINE: O Ciclo de Orfeu | Adriano Giannesin</title>
   <meta name="description" content="Um romance sobre amor, luto e o poder das memórias que se recusam a desaparecer. Henry Wallace descobre uma biblioteca oculta que transforma tudo o que ele sabia sobre a perda. Por Adriano Giannesin.">
   <meta name="keywords" content="MNEMOSINE O Ciclo de Orfeu, Adriano Giannesin, ficção literária brasileira, romance sobre luto e memória, ficção psicológica, romance contemporâneo, ficção especulativa literária">
@@ -17,6 +19,8 @@
   <meta property="og:image" content="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/assets/cover-pt.jpg">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Adriano Giannesin">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
   <meta property="books:author" content="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/pt/#autor">
   <meta property="books:isbn" content="9798170326037">
 
@@ -38,6 +42,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Book",
+      "@id": "https://admgiannesin-dot.github.io/adrianogiannesin.github.io/pt/#book",
       "name": "MNEMOSINE: O Ciclo de Orfeu",
       "author": {
         "@type": "Person",
@@ -47,10 +52,19 @@
       "inLanguage": "pt-BR",
       "isbn": "9798170326037",
       "numberOfPages": 449,
-      "bookFormat": ["Hardcover", "Paperback", "EBook"],
+      "bookFormat": "https://schema.org/EBook",
       "genre": ["Ficção Literária", "Ficção Contemporânea", "Ficção Psicológica"],
       "description": "Um romance sobre amor, luto e o poder das memórias — aquelas que ficam, que nos mudam e que às vezes se recusam a desaparecer. Henry Wallace perde as duas pessoas que mais amava, e descobre uma biblioteca oculta que transforma tudo o que ele sabia sobre memória, perda e a realidade.",
-      "about": ["luto", "memória", "perda", "identidade", "consciência", "amor", "humanidade"],
+      "image": "https://admgiannesin-dot.github.io/adrianogiannesin.github.io/assets/cover-pt.jpg",
+      "about": [
+        {"@type": "Thing", "name": "luto"},
+        {"@type": "Thing", "name": "memória"},
+        {"@type": "Thing", "name": "perda"},
+        {"@type": "Thing", "name": "identidade"},
+        {"@type": "Thing", "name": "consciência"},
+        {"@type": "Thing", "name": "amor"},
+        {"@type": "Thing", "name": "humanidade"}
+      ],
       "url": "https://admgiannesin-dot.github.io/adrianogiannesin.github.io/pt/",
       "sameAs": [
         "https://www.amazon.com/dp/B0H7P51W4K",
@@ -94,6 +108,9 @@
       "@id": "https://admgiannesin-dot.github.io/adrianogiannesin.github.io/pt/#autor",
       "name": "Adriano Giannesin",
       "url": "https://admgiannesin-dot.github.io/adrianogiannesin.github.io/pt/",
+      "sameAs": [
+        "https://www.amazon.com/stores/Adriano-Giannesin/author/B0HFZGMPYF"
+      ],
       "nationality": { "@type": "Country", "name": "Brasil" }
     },
     {
@@ -111,6 +128,56 @@
       }
     }
   ]
+  </script>
+
+  <!-- FAQPage structured data for rich results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "MNEMOSINE: O Ciclo de Orfeu é um romance de ficção científica?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não — não no sentido de gênero. MNEMOSINE usa elementos especulativos (uma tecnologia de preservação da consciência) como estrutura para uma história intensamente literária sobre luto, amor e os limites da conexão humana. O romance está mais próximo da ficção literária contemporânea do que da ficção científica."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Preciso conhecer o mito de Orfeu para ler MNEMOSINE?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. O mito é estrutural — os paralelos estão embutidos na história, não explicados. Nenhum conhecimento prévio é necessário. O romance funciona como experiência de leitura independente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "MNEMOSINE é o primeiro livro de uma série?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. MNEMOSINE é o Livro 1 de O Ciclo de Orfeu. É um romance completo, com início e resolução próprios."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Em quais formatos MNEMOSINE está disponível?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kindle, Brochura e Capa Dura. Disponível na Amazon.com.br e Amazon.com. O Kindle é o ponto de entrada mais acessível."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "MNEMOSINE está disponível em outros idiomas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. A obra foi escrita e publicada simultaneamente em português (MNEMOSINE: O Ciclo de Orfeu), inglês (Mnemosyne: The Orpheus Cycle) e espanhol (MNEMOSYNE: El ciclo de Orpheus). Cada edição é uma versão completa e independente do romance."
+        }
+      }
+    ]
+  }
   </script>
 
   <style>

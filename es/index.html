@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d0d0d">
+  <link rel="preload" as="image" href="../assets/cover-es.jpg" fetchpriority="high">
   <title>MNEMOSYNE: El ciclo de Orpheus | Adriano Giannesin</title>
   <meta name="description" content="Una novela sobre el amor, el duelo y el poder de los recuerdos que se niegan a desaparecer. Henry Wallace descubre una biblioteca oculta que transforma todo lo que sabía sobre la pérdida. De Adriano Giannesin.">
   <meta name="keywords" content="MNEMOSYNE El ciclo de Orpheus, Adriano Giannesin, ficción literaria, novela sobre duelo y memoria, ficción psicológica, ficción literaria contemporánea, novela especulativa literaria">
@@ -17,6 +19,8 @@
   <meta property="og:image" content="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/assets/cover-es.jpg">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Adriano Giannesin">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
   <meta property="books:author" content="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/es/#autor">
 
   <!-- Twitter Card -->
@@ -37,6 +41,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Book",
+      "@id": "https://admgiannesin-dot.github.io/adrianogiannesin.github.io/es/#book",
       "name": "MNEMOSYNE: El ciclo de Orpheus",
       "author": {
         "@type": "Person",
@@ -44,10 +49,19 @@
         "url": "https://admgiannesin-dot.github.io/adrianogiannesin.github.io/es/#autor"
       },
       "inLanguage": "es",
-      "bookFormat": ["Paperback", "EBook"],
+      "bookFormat": "https://schema.org/EBook",
       "genre": ["Ficción Literaria", "Ficción Contemporánea", "Ficción Psicológica"],
       "description": "Una novela sobre el amor, el duelo y el poder de los recuerdos — esos que se quedan, que nos cambian y que a veces se niegan a desaparecer. Henry Wallace pierde a las dos personas que más amaba y descubre una biblioteca oculta que transforma todo lo que sabía sobre la memoria, la pérdida y la realidad.",
-      "about": ["duelo", "memoria", "pérdida", "identidad", "consciencia", "amor", "humanidad"],
+      "image": "https://admgiannesin-dot.github.io/adrianogiannesin.github.io/assets/cover-es.jpg",
+      "about": [
+        {"@type": "Thing", "name": "duelo"},
+        {"@type": "Thing", "name": "memoria"},
+        {"@type": "Thing", "name": "pérdida"},
+        {"@type": "Thing", "name": "identidad"},
+        {"@type": "Thing", "name": "consciencia"},
+        {"@type": "Thing", "name": "amor"},
+        {"@type": "Thing", "name": "humanidad"}
+      ],
       "url": "https://admgiannesin-dot.github.io/adrianogiannesin.github.io/es/",
       "sameAs": [
         "https://www.amazon.com/dp/B0HGWGQFFC",
@@ -82,6 +96,9 @@
       "@id": "https://admgiannesin-dot.github.io/adrianogiannesin.github.io/es/#autor",
       "name": "Adriano Giannesin",
       "url": "https://admgiannesin-dot.github.io/adrianogiannesin.github.io/es/",
+      "sameAs": [
+        "https://www.amazon.com/stores/Adriano-Giannesin/author/B0HFZGMPYF"
+      ],
       "nationality": { "@type": "Country", "name": "Brasil" }
     },
     {
@@ -99,6 +116,56 @@
       }
     }
   ]
+  </script>
+
+  <!-- FAQPage structured data for rich results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿MNEMOSYNE: El ciclo de Orpheus es una novela de ciencia ficción?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, no en el sentido de género. MNEMOSYNE usa elementos especulativos (una tecnología de preservación de la consciencia) como marco para una historia intensamente literaria sobre el duelo, el amor y los límites de la conexión humana. La novela está más cerca de la ficción literaria contemporánea que de la ciencia ficción."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Necesito conocer el mito de Orfeo para leer MNEMOSYNE?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. El mito es estructural: los paralelismos están integrados en la historia, no explicados. No se requiere conocimiento previo. La novela funciona como experiencia de lectura independiente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Es MNEMOSYNE el primer libro de una serie?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. MNEMOSYNE es el Libro 1 de El Ciclo de Orpheus. Es una novela completa y autocontenida, con su propio inicio y resolución."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿En qué formatos está disponible MNEMOSYNE: El ciclo de Orpheus?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kindle ($4.99) y Tapa Blanda ($14.99) están disponibles en Amazon.com."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿MNEMOSYNE está disponible en otros idiomas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. La novela fue escrita y publicada simultáneamente en portugués (MNEMOSINE: O Ciclo de Orfeu), inglés (Mnemosyne: The Orpheus Cycle) y español (MNEMOSYNE: El ciclo de Orpheus). Cada edición es una versión completa e independiente de la novela."
+        }
+      }
+    ]
+  }
   </script>
 
   <style>
@@ -150,6 +217,10 @@
     .lang-btn span { display:block;font-size:0.75rem;color:var(--muted);margin-top:0.2rem; }
     footer { border-top:1px solid var(--border);padding:2rem;text-align:center;font-family:sans-serif;font-size:0.8rem;color:var(--muted); }
     footer a { color:var(--muted); } footer a:hover { color:var(--gold); }
+    .faq-item { border-bottom:1px solid var(--border);padding:1.2rem 0; }
+    .faq-item:first-child { border-top:1px solid var(--border); }
+    .faq-q { font-weight:400;color:#fff;margin-bottom:0.5rem;font-size:1rem; }
+    .faq-a { color:var(--muted);font-size:0.95rem;margin:0; }
     @media(max-width:680px){ .hero-inner{grid-template-columns:1fr;gap:2rem;} .book-cover{max-width:200px;margin:0 auto;display:block;} h1{font-size:2rem;} blockquote{font-size:1.2rem;} }
   </style>
 </head>
@@ -285,6 +356,33 @@
             <span>Português · Edição completa</span>
           </a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" aria-labelledby="faq-heading" style="background:var(--charcoal);border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="section-label">Preguntas frecuentes</div>
+      <h2 id="faq-heading">Sobre el libro</h2>
+      <div class="faq-item">
+        <p class="faq-q">¿Es MNEMOSYNE una novela de ciencia ficción?</p>
+        <p class="faq-a">No, no en el sentido de género. <em>MNEMOSYNE</em> usa elementos especulativos (una tecnología de preservación de la consciencia) como marco para una historia intensamente literaria sobre el duelo, el amor y los límites de la conexión humana. La novela está más cerca de la ficción literaria contemporánea que de la ciencia ficción.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">¿Necesito conocer el mito de Orfeo para leer la novela?</p>
+        <p class="faq-a">No. El mito es estructural: los paralelismos están integrados en la historia, no explicados. No se requiere conocimiento previo. La novela funciona como experiencia de lectura independiente.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">¿Es este el primer libro de una serie?</p>
+        <p class="faq-a">Sí. <em>MNEMOSYNE</em> es el Libro 1 de El Ciclo de Orpheus. Es una novela completa y autocontenida, con su propio inicio y resolución.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">¿En qué formatos está disponible?</p>
+        <p class="faq-a">Kindle ($4.99) y Tapa Blanda ($14.99), disponibles en Amazon.com.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">¿La novela está disponible en otros idiomas?</p>
+        <p class="faq-a">Sí. <em>MNEMOSYNE</em> fue escrita y publicada simultáneamente en portugués (<em>MNEMOSINE: O Ciclo de Orfeu</em>), inglés (<em>Mnemosyne: The Orpheus Cycle</em>) y español (<em>MNEMOSYNE: El ciclo de Orpheus</em>). Cada edición es una versión completa e independiente de la novela.</p>
       </div>
     </div>
   </section>
