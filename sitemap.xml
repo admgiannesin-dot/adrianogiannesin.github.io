@@ -14,6 +14,15 @@
   </url>
 
   <url>
+    <loc>https://admgiannesin-dot.github.io/adrianogiannesin.github.io/author/</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en"       href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/author/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/author/"/>
+  </url>
+
+  <url>
     <loc>https://admgiannesin-dot.github.io/adrianogiannesin.github.io/en/</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
