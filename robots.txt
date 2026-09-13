@@ -1,4 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
-Sitemap: https://adrianogiannesin.com/sitemap.xml
+Sitemap: https://admgiannesin-dot.github.io/adrianogiannesin.github.io/sitemap.xml

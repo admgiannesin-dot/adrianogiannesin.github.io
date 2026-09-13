@@ -1,49 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://adrianogiannesin.com/</loc>
+    <loc>https://admgiannesin-dot.github.io/adrianogiannesin.github.io/</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://adrianogiannesin.com/"/>
-    <xhtml:link rel="alternate" hreflang="en"       href="https://adrianogiannesin.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="pt-br"    href="https://adrianogiannesin.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="es"       href="https://adrianogiannesin.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="en"       href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br"    href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="es"       href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/es/"/>
   </url>
 
   <url>
-    <loc>https://adrianogiannesin.com/en/</loc>
+    <loc>https://admgiannesin-dot.github.io/adrianogiannesin.github.io/en/</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="en"       href="https://adrianogiannesin.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="pt-br"    href="https://adrianogiannesin.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="es"       href="https://adrianogiannesin.com/es/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://adrianogiannesin.com/"/>
+    <xhtml:link rel="alternate" hreflang="en"       href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br"    href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="es"       href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/"/>
   </url>
 
   <url>
-    <loc>https://adrianogiannesin.com/pt/</loc>
+    <loc>https://admgiannesin-dot.github.io/adrianogiannesin.github.io/pt/</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="pt-br"    href="https://adrianogiannesin.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="en"       href="https://adrianogiannesin.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="es"       href="https://adrianogiannesin.com/es/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://adrianogiannesin.com/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br"    href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="en"       href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/en/"/>
+    <xhtml:link rel="alternate" hreflang="es"       href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/"/>
   </url>
 
   <url>
-    <loc>https://adrianogiannesin.com/es/</loc>
+    <loc>https://admgiannesin-dot.github.io/adrianogiannesin.github.io/es/</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="es"       href="https://adrianogiannesin.com/es/"/>
-    <xhtml:link rel="alternate" hreflang="en"       href="https://adrianogiannesin.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="pt-br"    href="https://adrianogiannesin.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://adrianogiannesin.com/"/>
+    <xhtml:link rel="alternate" hreflang="es"       href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="en"       href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br"    href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/"/>
   </url>
 
 </urlset>
