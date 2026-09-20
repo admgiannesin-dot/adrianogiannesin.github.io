@@ -101,4 +101,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/en/memory-fiction/"/>
   </url>
 
+  <url>
+    <loc>https://admgiannesin-dot.github.io/adrianogiannesin.github.io/en/consciousness-fiction/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/en/consciousness-fiction/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/en/consciousness-fiction/"/>
+  </url>
+
 </urlset>
