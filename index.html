@@ -10,6 +10,7 @@
   <meta name="description" content="Official site of Adriano Giannesin. Mnemosyne: The Orpheus Cycle — a literary novel about grief, memory, and the things we refuse to let go. Available in English, Portuguese, and Spanish.">
   <link rel="canonical" href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/">
   <link rel="sitemap" type="application/xml" href="https://admgiannesin-dot.github.io/adrianogiannesin.github.io/sitemap.xml">
+  <link rel="preload" as="image" href="assets/cover-en.jpg" fetchpriority="high">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -55,67 +56,264 @@
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --dark:#0d0d0d;--gold:#c9a84c;--gold-light:#e8c97a;--text:#e8e4dc;--muted:#9a9080;--border:#2e2a22; }
-    body { font-family:'Georgia','Times New Roman',serif;background:var(--dark);color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem; }
-    a { color:var(--gold);text-decoration:none; } a:hover { color:var(--gold-light); }
-    .hub { max-width:600px;width:100%;text-align:center; }
-    .author-name { font-family:sans-serif;font-size:0.85rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem; }
-    h1 { font-size:2.4rem;font-weight:400;color:#fff;line-height:1.15;margin-bottom:0.4rem; }
-    .subtitle { font-size:1.1rem;color:var(--gold);font-style:italic;margin-bottom:2rem; }
-    .tagline { font-size:1rem;font-style:italic;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.2rem 0;margin:0 auto 2.5rem;max-width:420px; }
-    .lang-select { display:flex;flex-direction:column;gap:1rem;align-items:center;margin-bottom:2.5rem; }
-    .lang-btn { width:100%;max-width:360px;border:1px solid var(--border);padding:1.1rem 2rem;border-radius:3px;background:#1a1a1a;display:flex;align-items:center;gap:1.2rem;font-family:sans-serif;font-size:0.9rem;color:var(--text);transition:border-color 0.2s,background 0.2s;text-align:left; }
-    .lang-btn:hover { border-color:var(--gold);background:#222;text-decoration:none;color:#fff; }
-    .lang-code { font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);min-width:28px; }
-    .lang-title { flex:1; }
-    .lang-title strong { display:block;font-weight:400; }
-    .lang-title small { font-size:0.75rem;color:var(--muted); }
-    .hub-desc { font-size:0.95rem;color:var(--muted);line-height:1.65;margin:0 auto 2rem;max-width:420px; }
-    footer { font-family:sans-serif;font-size:0.78rem;color:var(--muted); }
+    :root {
+      --dark: #0d0d0d;
+      --charcoal: #141414;
+      --card: #1a1a1a;
+      --gold: #c9a84c;
+      --gold-light: #e8c97a;
+      --gold-dim: rgba(201,168,76,0.15);
+      --text: #e8e4dc;
+      --muted: #8a8070;
+      --border: #2a2620;
+      --max-w: 1100px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background: var(--dark);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { color: var(--gold-light); }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(13,13,13,0.95);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2rem; height: 56px;
+      backdrop-filter: blur(8px);
+    }
+    .nav-brand {
+      font-family: sans-serif; font-size: 0.82rem; letter-spacing: 0.16em;
+      color: var(--gold); text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex; gap: 1.5rem;
+      font-family: sans-serif; font-size: 0.78rem; letter-spacing: 0.08em;
+    }
+    .nav-links a { color: var(--muted); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* HERO */
+    .hub-hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 80px 2rem 0;
+      background:
+        radial-gradient(ellipse at 50% 30%, rgba(28,21,8,0.9) 0%, transparent 65%),
+        radial-gradient(ellipse at 20% 80%, rgba(201,168,76,0.04) 0%, transparent 50%),
+        var(--dark);
+      text-align: center;
+    }
+    .hub-label {
+      font-family: sans-serif; font-size: 0.72rem; letter-spacing: 0.28em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 1.6rem;
+    }
+    .hub-hero h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 400; color: #fff; line-height: 1.05;
+      margin-bottom: 0.3rem; letter-spacing: -0.01em;
+    }
+    .hub-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.5rem);
+      color: var(--gold); font-style: italic; margin-bottom: 1.4rem;
+    }
+    .hub-tagline {
+      font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+      font-style: italic; color: var(--muted);
+      max-width: 480px; line-height: 1.6; margin-bottom: 1rem;
+    }
+    .hub-desc {
+      font-size: 0.9rem; color: var(--muted); line-height: 1.7;
+      max-width: 520px; margin-bottom: 3.5rem;
+    }
+
+    /* COVERS SECTION */
+    .covers-section {
+      padding: 0 2rem 6rem;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(28,21,8,0.6) 0%, transparent 60%),
+        var(--dark);
+    }
+    .covers-grid {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+    .cover-edition {
+      display: flex; flex-direction: column;
+      border: 1px solid var(--border);
+      border-radius: 4px; overflow: hidden;
+      background: var(--card);
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+      color: var(--text);
+    }
+    .cover-edition:hover {
+      border-color: var(--gold);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 0 1px rgba(201,168,76,0.1);
+      text-decoration: none; color: var(--text);
+    }
+    .cover-wrap {
+      position: relative; overflow: hidden;
+      background: #111;
+    }
+    .cover-img {
+      width: 100%; display: block;
+      aspect-ratio: 2/3; object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .cover-edition:hover .cover-img { transform: scale(1.02); }
+    .cover-overlay {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 60px;
+      background: linear-gradient(to top, rgba(13,13,13,0.9), transparent);
+    }
+    .cover-info {
+      padding: 1.4rem 1.4rem 1.8rem;
+    }
+    .edition-lang {
+      font-family: sans-serif; font-size: 0.68rem; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .edition-title {
+      font-size: 1rem; color: #fff; line-height: 1.3; margin-bottom: 0.8rem;
+      font-weight: 400;
+    }
+    .edition-formats {
+      font-family: sans-serif; font-size: 0.75rem; color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+    .edition-cta {
+      display: inline-block; margin-top: 1rem;
+      font-family: sans-serif; font-size: 0.72rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold);
+      border-bottom: 1px solid var(--gold-dim);
+      padding-bottom: 1px; transition: border-color 0.2s;
+    }
+    .cover-edition:hover .edition-cta { border-color: var(--gold); }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      font-family: sans-serif;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--gold); }
+
+    /* RESPONSIVE */
+    @media (max-width: 860px) {
+      .covers-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    }
+    @media (max-width: 620px) {
+      .covers-grid { grid-template-columns: 1fr; max-width: 340px; }
+      .hub-hero { min-height: auto; padding-bottom: 3rem; }
+    }
   </style>
 </head>
 <body>
-  <main>
-  <div class="hub">
-    <div class="author-name">Adriano Giannesin</div>
-    <h1>Mnemosyne</h1>
-    <div class="subtitle">The Orpheus Cycle</div>
-    <div class="tagline">
-      "Some memories deserve the time they ask for."
-    </div>
-    <p class="hub-desc">A literary novel about grief, memory, and the things we refuse to let go — written and published simultaneously in Portuguese, English, and Spanish by Brazilian author Adriano Giannesin.</p>
-    <div class="lang-select">
-      <a href="en/" class="lang-btn" hreflang="en">
-        <span class="lang-code">EN</span>
-        <span class="lang-title">
-          <strong>Mnemosyne: The Orpheus Cycle</strong>
-          <small>English edition · Kindle, Paperback, Hardcover</small>
-        </span>
-      </a>
-      <a href="pt/" class="lang-btn" hreflang="pt-br">
-        <span class="lang-code">PT</span>
-        <span class="lang-title">
-          <strong>MNEMOSINE: O Ciclo de Orpheus</strong>
-          <small>Edição em Português · Kindle, Brochura, Capa Dura</small>
-        </span>
-      </a>
-      <a href="es/" class="lang-btn" hreflang="es">
-        <span class="lang-code">ES</span>
-        <span class="lang-title">
-          <strong>MNEMOSYNE: El ciclo de Orpheus</strong>
-          <small>Edición en Español · Kindle, Tapa Blanda, Tapa Dura</small>
-        </span>
-      </a>
-    </div>
-    <footer>
-      &copy; 2026 Adriano Giannesin &nbsp;·&nbsp;
-      <a href="series/">The Orpheus Cycle</a>
-      &nbsp;·&nbsp;
-      <a href="author/">About the Author</a>
-      &nbsp;·&nbsp;
-      <a href="https://www.amazon.com/author/adrianogiannesin" target="_blank" rel="noopener">Amazon Author Page</a>
-    </footer>
+
+<nav>
+  <div class="nav-brand">Adriano Giannesin</div>
+  <div class="nav-links">
+    <a href="series/">The Orpheus Cycle</a>
+    <a href="author/">Author</a>
   </div>
-  </main>
+</nav>
+
+<main>
+
+  <div class="hub-hero">
+    <div class="hub-label">Adriano Giannesin</div>
+    <h1>Mnemosyne</h1>
+    <div class="hub-subtitle">The Orpheus Cycle</div>
+    <div class="hub-tagline">"Some memories deserve the time they ask for."</div>
+    <p class="hub-desc">A literary novel about grief, memory, and the things we refuse to let go — written and published simultaneously in Portuguese, English, and Spanish.</p>
+  </div>
+
+  <div class="covers-section">
+    <div class="covers-grid">
+
+      <a href="en/" class="cover-edition" hreflang="en">
+        <div class="cover-wrap">
+          <img
+            src="assets/cover-en.jpg"
+            alt="Mnemosyne: The Orpheus Cycle — English edition cover"
+            class="cover-img"
+            width="400" height="600"
+            loading="eager"
+          >
+          <div class="cover-overlay"></div>
+        </div>
+        <div class="cover-info">
+          <div class="edition-lang">EN · English</div>
+          <div class="edition-title">Mnemosyne: The Orpheus Cycle</div>
+          <div class="edition-formats">Kindle · Paperback · Hardcover</div>
+          <span class="edition-cta">Read more →</span>
+        </div>
+      </a>
+
+      <a href="pt/" class="cover-edition" hreflang="pt-br">
+        <div class="cover-wrap">
+          <img
+            src="assets/cover-pt.jpg"
+            alt="MNEMOSINE: O Ciclo de Orpheus — capa da edição em português"
+            class="cover-img"
+            width="400" height="600"
+            loading="lazy"
+          >
+          <div class="cover-overlay"></div>
+        </div>
+        <div class="cover-info">
+          <div class="edition-lang">PT · Português</div>
+          <div class="edition-title">MNEMOSINE: O Ciclo de Orpheus</div>
+          <div class="edition-formats">Kindle · Brochura · Capa Dura</div>
+          <span class="edition-cta">Saiba mais →</span>
+        </div>
+      </a>
+
+      <a href="es/" class="cover-edition" hreflang="es">
+        <div class="cover-wrap">
+          <img
+            src="assets/cover-es.jpg"
+            alt="MNEMOSYNE: El ciclo de Orpheus — portada de la edición en español"
+            class="cover-img"
+            width="400" height="600"
+            loading="lazy"
+          >
+          <div class="cover-overlay"></div>
+        </div>
+        <div class="cover-info">
+          <div class="edition-lang">ES · Español</div>
+          <div class="edition-title">MNEMOSYNE: El ciclo de Orpheus</div>
+          <div class="edition-formats">Kindle · Tapa Blanda · Tapa Dura</div>
+          <span class="edition-cta">Leer más →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  &copy; 2026 Adriano Giannesin &nbsp;·&nbsp;
+  <a href="series/">The Orpheus Cycle</a>
+  &nbsp;·&nbsp;
+  <a href="author/">About the Author</a>
+  &nbsp;·&nbsp;
+  <a href="https://www.amazon.com/author/adrianogiannesin" target="_blank" rel="noopener">Amazon Author Page</a>
+</footer>
+
 </body>
 </html>
