@@ -50,6 +50,8 @@
         "url": "https://admgiannesin-dot.github.io/adrianogiannesin.github.io/es/#autor"
       },
       "inLanguage": "es",
+      "isbn": "9798170326037",
+      "numberOfPages": 449,
       "genre": ["Ficción Literaria", "Ficción Contemporánea", "Ficción Psicológica"],
       "description": "Una novela sobre el amor, el duelo y el poder de los recuerdos — esos que se quedan, que nos cambian y que a veces se niegan a desaparecer. Henry Wallace pierde a las dos personas que más amaba y descubre una biblioteca oculta que transforma todo lo que sabía sobre la memoria, la pérdida y la realidad.",
       "image": "https://admgiannesin-dot.github.io/adrianogiannesin.github.io/assets/cover-es.jpg",
@@ -236,6 +238,26 @@
     @media(max-width:800px){ .hero-inner{grid-template-columns:1fr;gap:2.5rem;} .book-cover{max-width:240px;margin:0 auto;display:block;} h1{font-size:2.2rem;} blockquote{font-size:1.25rem;} .hero{padding-left:1.5rem;padding-right:1.5rem;} }
     @media(max-width:480px){ .book-cover{max-width:200px;} h1{font-size:1.9rem;} .buy-grid{flex-direction:column;} .btn{text-align:center;} }
   </style>
+
+  <!-- GA4 — reemplaza G-XXXXXXXXXX con tu Measurement ID antes de activar
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+    document.addEventListener('click', function(e) {
+      var btn = e.target.closest('.btn');
+      if (btn && btn.href && btn.href.includes('amazon')) {
+        gtag('event', 'buy_click', {
+          event_category: 'ecommerce',
+          event_label: btn.textContent.trim(),
+          page_language: 'es'
+        });
+      }
+    });
+  </script>
+  -->
 </head>
 <body>
 

@@ -380,6 +380,26 @@
       .btn { text-align: center; }
     }
   </style>
+
+  <!-- GA4 — replace G-XXXXXXXXXX with your Measurement ID before activating
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+    document.addEventListener('click', function(e) {
+      var btn = e.target.closest('.btn');
+      if (btn && btn.href && btn.href.includes('amazon')) {
+        gtag('event', 'buy_click', {
+          event_category: 'ecommerce',
+          event_label: btn.textContent.trim(),
+          page_language: 'en'
+        });
+      }
+    });
+  </script>
+  -->
 </head>
 <body>
 

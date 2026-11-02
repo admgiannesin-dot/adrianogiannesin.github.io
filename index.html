@@ -220,6 +220,26 @@
       .hub-hero { min-height: auto; padding-bottom: 3rem; }
     }
   </style>
+
+  <!-- GA4 — replace G-XXXXXXXXXX with your Measurement ID before activating
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+    document.addEventListener('click', function(e) {
+      var btn = e.target.closest('[class*="btn"], .cover-edition');
+      if (btn && btn.href && btn.href.includes('admgiannesin')) {
+        gtag('event', 'edition_click', {
+          event_category: 'navigation',
+          event_label: btn.getAttribute('lang') || btn.textContent.trim().substring(0,30),
+          page_language: 'hub'
+        });
+      }
+    });
+  </script>
+  -->
 </head>
 <body>
 
