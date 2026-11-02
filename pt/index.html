@@ -247,22 +247,48 @@
     @media(max-width:480px){ .book-cover{max-width:200px;} h1{font-size:1.9rem;} .buy-grid{flex-direction:column;} .btn{text-align:center;} }
   </style>
 
-  <!-- GA4 — substitua G-XXXXXXXXXX pelo seu Measurement ID antes de ativar
+  <!-- GA4 — substitua G-XXXXXXXXXX pelo Measurement ID real do Google Analytics 4 para ativar
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-XXXXXXXXXX', {
+      page_title: 'MNEMOSINE PT',
+      page_language: 'pt'
+    });
+    // Mapa de ASIN e formato por URL
+    var ASIN_MAP = {
+      'B0H7P51W4K': {format: 'Kindle',    currency: 'BRL', price: '19.90'},
+      'B0H7PBW5BQ': {format: 'Brochura',  currency: 'USD', price: '24.99'},
+      'B0HHS6VQP8': {format: 'Capa Dura', currency: 'USD', price: '29.99'},
+      'B0HG6FXLR4': {format: 'Kindle EN', currency: 'USD', price: '7.99'},
+      'B0HFZGMPYF': {format: 'Paperback EN', currency: 'USD', price: '19.99'},
+      'B0HND4DRM3': {format: 'Hardcover EN', currency: 'USD', price: '29.99'},
+      'B0HGWGQFFC': {format: 'Kindle ES', currency: 'USD', price: '3.99'},
+      'B0HH1SZGDM': {format: 'Tapa Blanda ES', currency: 'USD', price: '14.99'},
+      'B0HND9LZZF': {format: 'Tapa Dura ES', currency: 'USD', price: '29.99'}
+    };
+    function extractAsin(url) {
+      var m = url.match(/\/dp\/([A-Z0-9]{10})/);
+      return m ? m[1] : null;
+    }
     document.addEventListener('click', function(e) {
-      var btn = e.target.closest('.btn');
-      if (btn && btn.href && btn.href.includes('amazon')) {
-        gtag('event', 'buy_click', {
-          event_category: 'ecommerce',
-          event_label: btn.textContent.trim(),
-          page_language: 'pt'
-        });
-      }
+      var link = e.target.closest('a[href*="amazon"]');
+      if (!link) return;
+      var asin = extractAsin(link.href);
+      var meta = asin ? ASIN_MAP[asin] : null;
+      var isHero = !!e.target.closest('.btn');
+      gtag('event', 'amazon_click', {
+        event_category: 'outbound',
+        event_label: link.textContent.trim().replace(/\s+/g, ' '),
+        page_language: 'pt',
+        book_format: meta ? meta.format : 'unknown',
+        book_asin: asin || 'unknown',
+        price_currency: meta ? meta.currency : 'unknown',
+        price_value: meta ? meta.price : 'unknown',
+        click_zone: isHero ? 'hero' : 'editions'
+      });
     });
   </script>
   -->

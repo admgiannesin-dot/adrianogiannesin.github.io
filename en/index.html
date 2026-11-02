@@ -381,22 +381,47 @@
     }
   </style>
 
-  <!-- GA4 — replace G-XXXXXXXXXX with your Measurement ID before activating
+  <!-- GA4 — replace G-XXXXXXXXXX with your real Google Analytics 4 Measurement ID to activate
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-XXXXXXXXXX', {
+      page_title: 'Mnemosyne EN',
+      page_language: 'en'
+    });
+    var ASIN_MAP = {
+      'B0HG6FXLR4': {format: 'Kindle',    currency: 'USD', price: '7.99'},
+      'B0HFZGMPYF': {format: 'Paperback', currency: 'USD', price: '19.99'},
+      'B0HND4DRM3': {format: 'Hardcover', currency: 'USD', price: '29.99'},
+      'B0H7P51W4K': {format: 'Kindle PT', currency: 'BRL', price: '19.90'},
+      'B0H7PBW5BQ': {format: 'Paperback PT', currency: 'USD', price: '24.99'},
+      'B0HHS6VQP8': {format: 'Hardcover PT', currency: 'USD', price: '29.99'},
+      'B0HGWGQFFC': {format: 'Kindle ES', currency: 'USD', price: '3.99'},
+      'B0HH1SZGDM': {format: 'Paperback ES', currency: 'USD', price: '14.99'},
+      'B0HND9LZZF': {format: 'Hardcover ES', currency: 'USD', price: '29.99'}
+    };
+    function extractAsin(url) {
+      var m = url.match(/\/dp\/([A-Z0-9]{10})/);
+      return m ? m[1] : null;
+    }
     document.addEventListener('click', function(e) {
-      var btn = e.target.closest('.btn');
-      if (btn && btn.href && btn.href.includes('amazon')) {
-        gtag('event', 'buy_click', {
-          event_category: 'ecommerce',
-          event_label: btn.textContent.trim(),
-          page_language: 'en'
-        });
-      }
+      var link = e.target.closest('a[href*="amazon"]');
+      if (!link) return;
+      var asin = extractAsin(link.href);
+      var meta = asin ? ASIN_MAP[asin] : null;
+      var isHero = !!e.target.closest('.btn');
+      gtag('event', 'amazon_click', {
+        event_category: 'outbound',
+        event_label: link.textContent.trim().replace(/\s+/g, ' '),
+        page_language: 'en',
+        book_format: meta ? meta.format : 'unknown',
+        book_asin: asin || 'unknown',
+        price_currency: meta ? meta.currency : 'unknown',
+        price_value: meta ? meta.price : 'unknown',
+        click_zone: isHero ? 'hero' : 'editions'
+      });
     });
   </script>
   -->
